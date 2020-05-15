@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+    $red: hsl(0, 78%, 62%);
+    $cyan: hsl(180, 62%, 55%);
+    $orange: hsl(34, 97%, 64%);
+    $blue: hsl(212, 86%, 64%);
+
+    $darkblue: hsl(234, 12%, 34%);
+    $grayblue: hsl(229, 6%, 66%);
+    $gray: hsl(0, 0%, 98%);
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color:  $gray;
+    min-width: 100vh;
+    padding-top: 55px;
+
+    @media(max-width: 700px) {
+    padding: 30px;
+    }
+}
+
+
+main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 200;
+        color: $darkblue;
+
+        span {
+            display: block;
+            font-weight: 600;
+        }
+    }
+
+    p {
+        max-width: calc(1440px/2);
+       
+        margin-left: auto;
+        margin-right: auto;
+        color: $grayblue;
+    }
+
+    section {
+        .container:nth-child(1) {
+            transform: translateY(50%);
+        }
+        .container:nth-child(3) {
+            transform: translateY(50%);
+        }
+
+        @media(max-width: 700px) {
+            .container:nth-child(1) {
+                transform: translateY(0%);
+            }
+            .container:nth-child(3) {
+                transform: translateY(0%);
+            }
+        }
+    }
+
+    .container {
+        width: 25%;;
+        height: 250px;
+        display: inline-block;
+        background-color: white;
+        box-shadow: 4px 9px 18px 3px rgba(148,142,148,0.45);
+        border-radius: 6px;
+        position: relative;
+        text-align: left;
+        padding: 15px;
+        padding-right: 30px;
+        color: $grayblue;
+        margin: 15px;
+
+        @media(max-width: 700px) {
+                width: 100%;
+                margin: 0px;
+                margin-bottom: 30px;
+
+        }
+
+        h2 {
+            color: $darkblue;
+            margin-bottom: 5px;
+        }
+
+        img {
+            position: absolute;
+            bottom: 14px;
+            right: 17px;
+        }
+    }
+
+    #one {
+        border-top: solid 4px $cyan;
+    }
+    #two {
+        border-top: solid 4px $red;
+    }
+    #three {
+        border-top: solid 4px $orange;
+    }
+    #four {
+        border-top: solid 4px $blue;
+    }
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+};
+.attribution a {
+    color: hsl(228, 45%, 44%);
+};
